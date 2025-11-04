@@ -1,18 +1,50 @@
 /* Css reset */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary:#7b4b2d;
+    --light:#ffffff;
+    --dark:#20140c;
+    --muted: #faf1ea;
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
+
 body{
-    line-height: 2em;
+    text-align: center;
+    font-family: Roboto, Arial;
+    line-height: 2;
+    background-color: #e1bb9a;
 }
 
+.h1.h2.h3.h4.h5.h6{
+    font-family: "Noto serif",serif ;
+    margin-bottom: 0.5;
+}
+/********************************************************!!!!colours!!!!********************************************************/
+.bg-primary{ background-color: #7b4b2d;}
+.bg-light{ background-color: #ffffff;}
+.bg-dark{ background-color: #20140c;}
+.bg-muted{ background-color: #faf1ea;}
+
+.text-primary{ color: #7b4b2d;}
+.text-light{ color: #ffffff;}
+.text-dark{ color: #363029;}
+.text-muted{ color: #faf1ea;}
 /********************************************************!!!!swatches!!!!********************************************************/
+.swatches{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
 
 .swatch .swatch-value{
-    background-color: aquamarine;
     aspect-ratio: 1 / 1 ;
     width: 6rem;
     border-radius: 100%;
+    box-shadow: 0 0.1rem 0.2rem 0.1rem hsla(32, 14%, 19%, 0.2);
 }
