@@ -1,0 +1,18 @@
+/* Css reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    line-height: 2em;
+}
+
+/********************************************************!!!!swatches!!!!********************************************************/
+
+.swatch .swatch-value{
+    background-color: aquamarine;
+    aspect-ratio: 1 / 1 ;
+    width: 6rem;
+    border-radius: 100%;
+}
