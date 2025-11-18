@@ -1,50 +1,152 @@
-/* Css reset */
+/* Imports the Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
-    --primary:#7b4b2d;
-    --light:#ffffff;
-    --dark:#20140c;
-    --muted: #faf1ea;
+/* Variables for this website */
+:root {
+    --primary: #7b4b2d;
+    --primary-dark: #a67557;
+    --primary-light: #5b341b;
+
+    --light: #ffffff;
+    --dark: #363029;
+    
+    --muted: #f8f6f5;
+    --mute-tint: #e4c9bb;
+    --mute-tintless: #faf7f5;
+
+    --font-normal: Roboto, Arial, sans-serif;
+    --font-heading: 'Noto Serif', serif;
+
+    --space-0: 0; /* 0px */
+    --space-1: 0.5rem; /* 8px */
+    --space-2: 1rem; /* 16px */
+    --space-3: 2rem; /* 32px */
 }
 
-*{
+/* CSS Reset */
+* {
     margin: 0;
     padding: 0;
 }
 
-
-body{
-    text-align: center;
-    font-family: Roboto, Arial;
-    line-height: 2;
-    background-color: #e1bb9a;
+body {
+    font-family: var(--font-normal);
+    line-height: 1.5;
 }
 
-.h1.h2.h3.h4.h5.h6{
-    font-family: "Noto serif",serif ;
-    margin-bottom: 0.5;
-}
-/********************************************************!!!!colours!!!!********************************************************/
-.bg-primary{ background-color: #7b4b2d;}
-.bg-light{ background-color: #ffffff;}
-.bg-dark{ background-color: #20140c;}
-.bg-muted{ background-color: #faf1ea;}
-
-.text-primary{ color: #7b4b2d;}
-.text-light{ color: #ffffff;}
-.text-dark{ color: #363029;}
-.text-muted{ color: #faf1ea;}
-/********************************************************!!!!swatches!!!!********************************************************/
-.swatches{
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
 }
 
-.swatch .swatch-value{
-    aspect-ratio: 1 / 1 ;
-    width: 6rem;
+/*********************** BUTTONS ***********************/
+.btn {
+    border: none;
+    border-radius: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    font-size: larger;
+}
+
+.btn-primary:active{
+    background-color: var(--primary-light);
+    font-size: larger;
+}
+
+
+.btn-secondary {
+    background-color: var(--muted);
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--mute-tint);
+    font-size: larger;
+
+}
+
+.btn-secondary:active {
+    background-color: var(--mute-tintless);
+    font-size: larger;
+
+}
+
+
+
+.link {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: var(--primary-light);
+    text-decoration: wavy;
+    font-size: larger;
+}
+
+/*********************** COLORS ***********************/
+.bg-primary { background-color: var(--primary); } /* var() looks for a variable */
+.bg-light { background-color: var(--light); }
+.bg-dark { background-color: var(--dark); }
+.bg-muted { background-color: var(--muted); }
+
+.text-primary { color: var(--primary); }
+.text-light { color: var(--light); }
+.text-dark { color: var(--dark); }
+.text-muted { color: var(--muted); }
+
+/*********************** LAYOUT ***********************/
+.d-flex { display: flex; }
+
+.flex-between { justify-content: space-between; }
+
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* repeat 1fr twice */
+}
+
+.grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* repeat 1fr twice */
+}
+
+/*********************** SPACING ***********************/
+.m-0 { margin: var(--space-0); }
+.m-1 { margin: var(--space-1); }
+.m-2 { margin: var(--space-2); }
+.m-3 { margin: var(--space-3); }
+
+.p-0 { padding: var(--space-0); }
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+
+.gap-0 { gap: var(--space-0); }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+
+/*********************** SWATCHES ***********************/
+.swatches {
+    display: flex; /* organizes children elements in a line */
+}
+
+.swatch .swatch-value {
+    aspect-ratio: 1 / 1;
+    width: 4rem; /* em - Root font size (16px) */
     border-radius: 100%;
-    box-shadow: 0 0.1rem 0.2rem 0.1rem hsla(32, 14%, 19%, 0.2);
+    box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(54, 48, 41, 0.2);
+}
+
+.swatch .swatch-name {
+    text-align: center;
 }

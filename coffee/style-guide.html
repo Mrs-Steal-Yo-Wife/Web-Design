@@ -3,58 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="style.css">
-    
+
     <title>Coffee Shop Style Guide</title>
 </head>
 <body>
+    
     <main>
-        <section class="heading">
-            <h1>Coffee Shop Style Guide</h1>
-            <p>Design token and reusable styles for a webiste </p>
-        </section>
+        <h1>Coffee Shop Style Guide</h1>
+        <p>Design tokens and reusable styles for the website.</p>
 
-        <!-- Colour pallette -->
-        <section id="Colours">
-            <h2> Colour Pallette </h2>
+        <!-- Color Palette -->
+        <section id="colors">
+            <h2>Color Palette</h2>
 
-            <article class="swatches">
-                <!--swatch-->
+            <article class="swatches d-flex gap-2">
+
+                <!-- Color Swatch -->
                 <div class="swatch">
                     <div class="swatch-value bg-primary"></div>
                     <p class="swatch-name">Primary</p>
                 </div>
-                  
-                <!--swatch-->
+
+                <!-- Color Swatch -->
                 <div class="swatch">
                     <div class="swatch-value bg-light"></div>
                     <p class="swatch-name">Light</p>
                 </div>
-                 
-                <!--swatch-->
+
+                <!-- Color Swatch -->
                 <div class="swatch">
                     <div class="swatch-value bg-dark"></div>
                     <p class="swatch-name">Dark</p>
                 </div>
-                  
-                <!--swatch-->
+
+                <!-- Color Swatch -->
                 <div class="swatch">
                     <div class="swatch-value bg-muted"></div>
-                    <p class="swatch-name"> Muted</p>
+                    <p class="swatch-name">Muted</p>
                 </div>
 
             </article>
         </section>
 
-        <section id="type">
-            <h2>Type Face</h2>
+        <!-- Fonts and Typography -->
+        <section id="typography">
+            <h2>Typography</h2>
 
-            <h1 class="heading-xl">Heading XL - Coffee Shop </h1>
-            <h2 class="heading-lg">Heading LG -  Fresh for you </h2>
-            <p> Body text - used for general descriptions </p>
-            <p class="text-muted bg-dark">Muted text - for subtle details </p>
+            <h1 class="heading-xl">Heading XL - Coffee Shop</h1>
+            <h2 class="heading-lg">Heading LG - Freshly Brewed</h2>
+            <p>Body Text - Used for general descriptions</p>
+            <p class="text-muted bg-dark">Muted text - for subtle details</p>
+        </section>
 
+        <!-- Spacing and Sizing -->
+        <section id="spacing">
+            <h2>Spacing and Sizing</h2>
+
+            <div class="bg-muted p-0 m-1">.p-0 - No Padding</div>
+            <div class="bg-muted p-1 m-1">.p-1 - Small Padding</div>
+            <div class="bg-muted p-2 m-1">.p-2 - Normal Padding</div>
+            <div class="bg-muted p-3 m-1">.p-3 - Large Padding</div>
+        </section>
+
+        <!-- Layout Utils -->
+        <section id="layout">
+            <h2>Layout Utils</h2>
+
+            <div class="d-flex flex-between">
+                <strong>Label</strong> <!-- bold -->
+                <span>Value</span> <!-- text -->
+            </div>
+
+            <div class="grid-2col gap-2 m-2">
+                <div class="bg-muted p-2">Col 1</div>
+                <div class="bg-muted p-2">Col 2</div>
+            </div>
+
+            <div class="grid-3col gap-2 m-2">
+                <div class="bg-muted p-2">Col 1</div>
+                <div class="bg-muted p-2">Col 2</div>
+                <div class="bg-muted p-2">Col 3</div>
+            </div>
+        </section>
+
+        <!-- Buttons and Links -->
+        <section id="buttons">
+            <h2>Buttons and Links</h2>
+
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <a href="#" class="link">Inline Link</a>
+        </section>
+
+        <!--Componinits-->
+        <section id="components">
+            <h2>components</h2>
+
+            <!--product image -->
+            <figure class="product-image">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.d0OlS1obaNRKrj1WbMQRngHaE9?w=630&h=422&rs=1&pid=ImgDetMain&o=7&rm=3" alt="frog">
+                <figcaption class="product-tag"> 50% off - &euro;2.50</figcaption>
+            </figure>
+        
+
+            
         </section>
     </main>
 
